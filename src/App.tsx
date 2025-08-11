@@ -27,14 +27,14 @@ function App(): JSX.Element {
   const onToggle = (id: string) => {
     // console.log('onToggle : ', id);
     // 전달받은 ID 를 이용해서 map 으로 찾아서 id가 같으면 completed 변경
-    setTodos(prevTodos =>
-      prevTodos.map(todo => (todo.id === id ? { ...todo, completed: !todo.completed } : todo)),
+    setTodos(todos =>
+      todos.map(todo => (todo.id === id ? { ...todo, completed: !todo.completed } : todo)),
     );
   };
   const onDelete = (id: string) => {
     // console.log('onDelete : ', id);
     // 전달 받은 ID 를 제외한 나머지 즉, map 으로 새 목록으로 변경
-    setTodos(prevTodos => prevTodos.filter(todo => todo.id !== id));
+    setTodos(todos => todos.filter(todo => todo.id !== id));
   };
   const onEdit = () => {
     console.log('onEdit');
