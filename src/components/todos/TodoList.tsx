@@ -3,9 +3,9 @@ import TodoItem from './TodoItem';
 
 type TodoItemProps = {
   todos: TodoType[];
-  onToggle: (id: TodoType['id']) => void;
-  onDelete: (id: TodoType['id']) => void;
-  onEdit: () => void;
+  onToggle: (id: string) => void;
+  onDelete: (id: string) => void;
+  onEdit: (id: string, newTitle: string) => void;
 };
 const TodoList = ({ todos, onToggle, onDelete, onEdit }: TodoItemProps): JSX.Element => {
   return (
