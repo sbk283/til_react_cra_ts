@@ -18,6 +18,13 @@ module.exports = {
           800: '#3730a3',
           900: '#312e81',
         },
+        // CSS 변수(HSL 값) 연결
+        bg: 'hsl(var(--bg))',
+        fg: 'hsl(var(--fg))',
+        surface: 'hsl(var(--surface))',
+        borderc: 'hsl(var(--border))',
+        primary: 'hsl(var(--primary))',
+        'primary-fg': 'hsl(var(--primary-fg))',
       },
       boxShadow: {
         card: '0 2px 10px rgba(0,0,0,0.08)',
