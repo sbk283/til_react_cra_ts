@@ -1,8 +1,10 @@
 import { ChangeEvent, KeyboardEvent, useState } from 'react';
 import { TodoType } from '../../types/todoType';
 import { useTodoActions } from '../../context/todo/hooks';
+import { useNavigate } from 'react-router-dom';
 
 const TodoWrite = () => {
+  const navigate = useNavigate();
   // js 자리
   const { addTodo } = useTodoActions();
   // 할일 제목 값 관리
@@ -28,6 +30,7 @@ const TodoWrite = () => {
       };
       addTodo(newTodo);
       setTitle('');
+      navigate('/todos/read');
     }
   };
   // jsx 자리
@@ -42,7 +45,7 @@ const TodoWrite = () => {
       />
       <button
         onClick={handleAdd}
-        className="px-y rounded-lg bg-brand py-2 text-white hover:opacity-90 active:opacity-80"
+        className="rounded-lg bg-brand px-2 py-2 text-white hover:opacity-90 active:opacity-80"
       >
         등록
       </button>

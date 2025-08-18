@@ -5,7 +5,6 @@ const TodoList = (): JSX.Element => {
   const { todos } = useTodosState();
   return (
     <div>
-      <h2 className="text-xl font-semibold">할일목록</h2>
       {todos.length === 0 ? (
         <p className="mt-3 text-neutral-500">목록이 없습니다.</p>
       ) : (
